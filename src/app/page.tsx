@@ -1,5 +1,4 @@
-import Image from "next/image";
-import TypewriterComponent from "typewriter-effect";
+export const runtimes = "edge";
 
 export default function Home() {
   return (
