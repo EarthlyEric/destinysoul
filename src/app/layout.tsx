@@ -34,6 +34,8 @@ export default function RootLayout({
         <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png"/>
         <link rel="icon" type="image/png" sizes="96x96" href="icons/favicon-96x96.png"/>
         <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png"/>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7732718599700700" crossOrigin="anonymous">
+        </script>
       </head>
       <body className={inter.className}>
         <Navbar/>
