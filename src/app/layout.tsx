@@ -6,6 +6,8 @@ import Footer from "./components/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
+export const runtimes = "edge";
+
 export const metadata: Metadata = {
   title: "DestinySoul Studio",
   description: "DestinySoul Studio 官方網站 ! 這裡提供了本工作室的作品介紹 !",

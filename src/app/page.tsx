@@ -1,5 +1,3 @@
-export const runtimes = "edge";
-
 export default function Home() {
   return (
     <div>
