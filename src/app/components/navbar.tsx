@@ -8,7 +8,9 @@ export default function Navbar(){
     return (
         <header className="py-2 z-10 fixed top-0 left-0 right-0 border-b bg-ds-gary border-white">
             <div className="flex items-center justify-between xl:max-w-7xl xl:mx-auto max-w-full px-[8%] flex-wrap w-full">
-                <Image src="/images/logo_banner.png" width={192} height={64} alt={"Destiny Soul Logo"}/>
+                <Image src="/images/logo_banner.png" width={192} height={64} alt={"Destiny Soul Logo"}>
+                    <a href="/"><span className="sr-only">Destiny Soul</span></a>
+                </Image>
                 <button className="text-white lg:hidden block h-6 w-6 cursor-pointer" onClick={()=>close(!open)}>
                     {open ? (
                         <svg  xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" viewBox="0 0 20 20" fill="currentColor">
