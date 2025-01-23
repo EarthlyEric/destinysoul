@@ -21,13 +21,13 @@ export default function Navbar() {
           <div className="justify-between items-center mt-2 mb-2 md:m-0 md:flex flex flex-row hidden">
             <a 
                 href="/about-us" 
-                className="text-gray-50 text-center mr-6 font-medium text-base border border-transparent hover:border-white hover:py-2 hover:px-2 rounded transition-all">
+                className="text-gray-50 text-center mr-6 font-medium text-base border border-transparent hover:border-white rounded flex items-center justify-center px-4 py-2 transition-all">
                 關於我們
             </a>
             <a 
                 href="/Vo9YjWQiI19G6s9HiVMa#" 
-                className="text-gray-50 text-center mr-6 font-medium text-base">
-              Contact Us
+                className="text-gray-50 text-center mr-6 font-medium text-base border border-transparent hover:border-white rounded flex items-center justify-center px-4 py-2 transition-all">
+                聯繫我們
             </a>
           </div>
           <div className="md:hidden items-center flex">
@@ -39,8 +39,8 @@ export default function Navbar() {
                 strokeWidth="2"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
-                className="w-6 h-6 text-gray-50 hover:text-gray-900"
-              >
+                className="w-12 h-12 text-gray-50 border border-transparent hover:border-white rounded flex items-center justify-center px-2 py-2 transition-all"
+                >   
                 <path d="M4 6h16M4 12h16M4 18h16" />
               </svg>
             </button>
@@ -49,15 +49,16 @@ export default function Navbar() {
         {menuOpen && (
           <div className="md:hidden mobile-menu">
             <div className="flex flex-col">
-              <a href="/Vo9YjWQiI19G6s9HiVMa#" className="text-gray-50 text-center mt-2 font-medium text-base">
-                Product
-              </a>
-              <a href="/Vo9YjWQiI19G6s9HiVMa#" className="text-center mt-2 font-medium text-base">
-                Features
-              </a>
-              <a href="/Vo9YjWQiI19G6s9HiVMa#" className="text-white text-center mt-2 font-medium text-base">
-              Pricing
-              </a>
+            <a 
+                href="/about-us" 
+                className="text-gray-50 text-center mr-6 font-medium text-base border border-transparent hover:border-white rounded flex items-center justify-center px-4 py-2 transition-all">
+                關於我們
+            </a>
+            <a 
+                href="/contact-us" 
+                className="text-gray-50 text-center mr-6 font-medium text-base border border-transparent hover:border-white rounded flex items-center justify-center px-4 py-2 transition-all">
+                聯繫我們
+            </a>
             </div>
           </div>
         )}
