@@ -15,7 +15,7 @@ export default function Navbar() {
   ];
 
   return (
-    <div className="bg-gray-100 dark:bg-gray-800 pt-4 pr-8 pb-4 pl-8">
+    <div className="bg-gray-100 dark:bg-gray-800 pt-4 pr-8 pb-4 pl-8 sticky top-0">
       <nav className="w-full">
         <div className="w-full justify-between md:flex-row mt-auto mr-auto mb-auto ml-auto flex max-w-screen-2xl">
           <div className="bg-gray-100 dark:bg-gray-800 items-center justify-center md:order-none flex-row flex">
