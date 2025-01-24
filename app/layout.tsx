@@ -16,6 +16,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "DestinySoul Studio",
   description: "DestinySoul Studio 官方網站，",
+  keywords: ["DestinySoul", "DestinySoul Studio","EarthlyEric6"]
 };
 
 export default function RootLayout({
