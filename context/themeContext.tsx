@@ -47,7 +47,7 @@ export function ThemeProvider({ children }: ThemeProviderProps) {
 export function useDarkMode(): ThemeContextType {
   const context = useContext(ThemeContext);
   if (context === undefined) {
-    throw new Error("useDarkMode must be used within a ThemeProvider");
+    throw new Error("[Debug] useDarkMode must be used within a ThemeProvider");
   }
   return context;
 }
