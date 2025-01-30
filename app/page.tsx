@@ -1,4 +1,4 @@
-import { ChevronDownIcon} from "@heroicons/react/16/solid"
+import { FaAngleDoubleDown } from "react-icons/fa";
 
 export default function HomePage() {
   return (
@@ -12,7 +12,7 @@ export default function HomePage() {
 
           </p>
           <button className="btn btn-primary">
-            <ChevronDownIcon className="w-6 h-6 mr-2" />
+            <FaAngleDoubleDown className="w-6 h-6 mr-2" />
             Scroll Down
             </button>
         </div>
