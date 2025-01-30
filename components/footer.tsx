@@ -35,6 +35,15 @@ export default function Footer() {
             <aside>
                 <p>Copyright © {new Date().getFullYear()} - DestinySoul Studio. All right reserved. </p>
                 <p>Made by EarthlyEric6 with ❤️</p>
+                <p>Commit ID: 
+                    {process.env.COMMIT_SHA === "development" ? (
+                    "development") 
+                    : (
+                        <a href={"https://github.com/EarthlyEric/destinysoul/commit/"+process.env.COMMIT_SHA} className="link link-hover link-primary">
+                            {process.env.COMMIT_SHA}
+                        </a>
+                    )}
+                </p>
             </aside>
         </footer>
     );
