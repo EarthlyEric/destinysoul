@@ -38,7 +38,7 @@ export default function Footer() {
                     {process.env.COMMIT_SHA === "development" ? (
                     "development") 
                     : (
-                        <a href={"https://github.com/EarthlyEric/destinysoul/commit/"+process.env.COMMIT_SHA ? process.env.COMMIT_SHA : "N/A"} className="link link-hover link-primary">
+                        <a href={"https://github.com/EarthlyEric/destinysoul/commit/"+process.env.COMMIT_SHA} className="link link-hover link-primary">
                             {process.env.COMMIT_SHA ? process.env.COMMIT_SHA.substring(0, 7) : "N/A"}
                         </a>
                     )}
