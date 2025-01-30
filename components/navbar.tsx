@@ -23,7 +23,7 @@ export default function Navbar() {
         </Link>
       </div>
       {/*Desktop*/}
-      <div className="navbar-end md:hidden lg:flex">
+      <div className="navbar-end hidden lg:flex">
         <ul className="menu menu-horizontal rounded-box px-5">
           {navItem.map(item => (
             <li key={item.url}>
