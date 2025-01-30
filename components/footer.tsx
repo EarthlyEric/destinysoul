@@ -34,7 +34,7 @@ export default function Footer() {
             </div>
             <aside>
                 <p>Copyright © {new Date().getFullYear()} - DestinySoul Studio. All right reserved. </p>
-                <p>Made by EarthlyEric6 with ❤️ </p>
+                <p>Made by EarthlyEric6 with ❤️</p>
             </aside>
         </footer>
     );
