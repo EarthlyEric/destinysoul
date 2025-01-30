@@ -32,8 +32,7 @@ export default function Footer() {
                     </a>
                 ))}
             </div>
-            <aside>
-                <p>Copyright © {new Date().getFullYear()} - DestinySoul Studio. All right reserved. </p>
+            <aside className="text-xs leading-none">
                 <p>Made by EarthlyEric6 with ❤️</p>
                 <p>Commit ID: 
                     {process.env.COMMIT_SHA === "development" ? (
@@ -44,6 +43,7 @@ export default function Footer() {
                         </a>
                     )}
                 </p>
+                <p>Copyright © {new Date().getFullYear()} - DestinySoul Studio. All right reserved. </p>
             </aside>
         </footer>
     );
