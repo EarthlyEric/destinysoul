@@ -1,3 +1,3 @@
 [submodule "public/assets"]
 	path = public/assets
-	url = https://github.com/EarthlyEric/destinysoul-assets
+	url = git@github.com:EarthlyEric/destinysoul-assets.git
