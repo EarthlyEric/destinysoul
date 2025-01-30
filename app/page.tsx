@@ -9,7 +9,7 @@ export default function HomePage() {
           <h1 className="mb-5 text-5xl font-bold">👋, Hello there !</h1>
           <p className="mb-5 text-xl font-bold">Welcome to DestinySoul Studio&apos;s Website 🎉</p>
           <p className="mb-5">
-
+            {/* wait to fill text */}
           </p>
           <button className="btn btn-primary">
             <FaAngleDoubleDown className="w-6 h-6 mr-2" />
