@@ -1,6 +1,6 @@
 "use client"
 
-import { Bars3Icon, LanguageIcon, XMarkIcon } from '@heroicons/react/16/solid'
+import { HiMenuAlt3, HiTranslate, HiX } from "react-icons/hi";
 import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
@@ -16,7 +16,7 @@ export default function Navbar() {
     
   ]
   return (
-    <div className="navbar bg-gray-800 sticky top-0">
+    <div className="navbar bg-gray-900 sticky top-0">
       <div className="navbar-start px-5">
         <Link href="/" className="btn btn-ghost p-0" style={{ width: '192px', height: '64px' }}>
           <Image src="/assets/transparent/ds-banner-dark.png" alt="destinysoul logo banner" width={192} height={64} />
@@ -34,7 +34,7 @@ export default function Navbar() {
           <li className="relative">
             <details className="dropdown dropdown-end">
               <summary className="flex items-center cursor-pointer">
-                <LanguageIcon className="w-7 h-7 mr-2 text-white" />
+                <HiTranslate className="w-7 h-7 mr-2 text-white" />
              </summary>
               <ul className="dropdown-content menu menu-compact p-2 shadow bg-base-100 rounded-box w-40 mt-2">
                 {langList.map(lang => (
@@ -53,7 +53,7 @@ export default function Navbar() {
       {/*Mobile Toggle Button*/}
       <div className="navbar-end lg:hidden">
         <button className="btn btn-ghost btn-square" onClick={() => setIsOpen(!isOpen)}>
-          {isOpen ? <XMarkIcon className="w-6 h-6" /> : <Bars3Icon className="w-6 h-6" />}
+          {isOpen ? <HiX className="w-6 h-6" /> : <HiMenuAlt3 className="w-6 h-6" />}
         </button>
       </div>
       {/*Mobile*/}
