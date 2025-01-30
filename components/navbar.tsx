@@ -16,7 +16,7 @@ export default function Navbar() {
     
   ]
   return (
-    <div className="navbar bg-gray-900 sticky top-0">
+    <div className="navbar bg-gray-900 sticky top-0 z-50">
       <div className="navbar-start px-5">
         <Link href="/" className="btn btn-ghost p-0" style={{ width: '192px', height: '64px' }}>
           <Image src="/assets/transparent/ds-banner-dark.png" alt="destinysoul logo banner" width={192} height={64} />
@@ -31,12 +31,12 @@ export default function Navbar() {
             </li>
           ))}
 
-          <li className="relative">
-            <details className="dropdown dropdown-end">
+          <li className="relative ">
+            <details className="dropdown dropdown-end ">
               <summary className="flex items-center cursor-pointer">
                 <HiTranslate className="w-7 h-7 mr-2 text-white" />
              </summary>
-              <ul className="dropdown-content menu menu-compact p-2 shadow bg-base-100 rounded-box w-40 mt-2">
+              <ul className="dropdown-content menu menu-compact p-2 shadow bg-gray-900 rounded-box w-40 mt-2">
                 {langList.map(lang => (
                   <li key={lang.langCode}>
                     <button className="btn btn-sm btn-ghost flex items-center w-full gap-2">
