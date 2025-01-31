@@ -11,8 +11,8 @@ export default function Navbar() {
     { label: 'Contact us', url: '#contact-us' }
   ]
   const langList = [
-    { label: '繁體中文', url: '#', langCode: 'zh-Hant' },
-    { label: 'English', url: '#', langCode: 'en-US' },
+    { label: '繁體中文', url: '#', langCode: 'zh_TW' },
+    { label: 'English', url: '#', langCode: 'en_US' },
     
   ]
   return (
