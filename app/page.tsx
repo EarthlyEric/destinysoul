@@ -13,7 +13,7 @@ export default function HomePage() {
           </p>
           <button className="btn btn-primary">
             <FaAngleDoubleDown className="w-6 h-6 mr-2" />
-            Scroll Down
+            Learn More
             </button>
         </div>
       </div>  
