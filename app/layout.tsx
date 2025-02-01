@@ -1,19 +1,12 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import {NextIntlClientProvider} from 'next-intl';
+import {getLocale, getMessages} from 'next-intl/server';
 import "./globals.css";
+
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import Favicon from "@/components/metadata/favicon";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "DestinySoul Studio",
@@ -21,21 +14,26 @@ export const metadata: Metadata = {
   keywords: ["DestinySoul", "DestinySoul Studio", "EarthlyEric6"],
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const locale = await getLocale();
+  const messages = await getMessages();
+
   return (
-    <html lang="en">
+    <html lang={locale}>
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <Favicon />
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <Navbar />
-        {children}
-        <Footer />
+      <body>
+        <NextIntlClientProvider messages={messages}>
+          <Navbar />
+          {children}
+          <Footer />
+        </NextIntlClientProvider>
       </body>
     </html>
   );
