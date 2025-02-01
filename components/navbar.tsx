@@ -3,7 +3,7 @@
 import { HiMenuAlt3, HiTranslate, HiX } from "react-icons/hi";
 import Image from 'next/image'
 import Link from 'next/link'
-import { use, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { defaultLocale } from "@/i18n/config";
 
 export default function Navbar() {
@@ -16,7 +16,7 @@ export default function Navbar() {
     { label: 'English', url: '#', locale: 'en-US' },
     
   ]
-  
+
   useEffect(() => {
     const locale = document.cookie.split(';').find(row => row.startsWith('DS_LOCALE='))?.split('=')[1];
     if (!locale) {
