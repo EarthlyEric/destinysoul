@@ -8,7 +8,7 @@ const nextConfig: NextConfig = {
     domains: ['raw.githubusercontent.com'],
   },
   env: {
-    COMMIT_SHA: process.env.CF_PAGES_COMMIT_SHA || 'development',
+    COMMIT_SHA: process.env.VERCEL_GIT_COMMIT_SHA || 'development',
   }
 };
 

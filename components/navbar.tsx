@@ -5,11 +5,14 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useEffect, useState } from "react";
 import { defaultLocale } from "@/i18n/config";
+import { useTranslations } from "next-intl";
 
 export default function Navbar() {
+  const t = useTranslations('Navbar');
+
   const [isOpen, setIsOpen] = useState(false)
   const navItem = [
-    { label: 'Contact us', url: '#contact-us' }
+    { label: t('contact-us'), url: '#contact-us' }
   ]
   const langList = [
     { label: '繁體中文', url: '#', locale: 'zh-TW' },

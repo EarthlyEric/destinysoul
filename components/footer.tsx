@@ -1,6 +1,8 @@
 import { FaGithub } from "react-icons/fa";
+import { useTranslations } from "next-intl";
 
 export default function Footer() {
+    const t = useTranslations('Footer');
     const navItems = [
         { label: "EULA", href: "/eula" },
         { label: "Privacy Policy", href: "/privacy" },
@@ -33,8 +35,8 @@ export default function Footer() {
                 ))}
             </div>
             <aside className="text-xs leading-none">
-                <p>Made by EarthlyEric6 with ❤️</p>
-                <p>Commit ID: 
+                <p>{t('text.author')}</p>
+                <p>{t('text.buildid')}
                     {process.env.COMMIT_SHA === "development" ? (
                     "development") 
                     : (
@@ -43,7 +45,7 @@ export default function Footer() {
                         </a>
                     )}
                 </p>
-                <p>Copyright © {new Date().getFullYear()} - DestinySoul Studio. All right reserved. </p>
+                <p>{t('text.copyright', { year: new Date().getFullYear() })} </p>
             </aside>
         </footer>
     );

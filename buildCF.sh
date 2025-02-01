@@ -1,1 +1,0 @@
-npx @cloudflare/next-on-pages@1

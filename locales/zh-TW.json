@@ -1,9 +1,20 @@
 {
     "HomePage":{
         "hero": {
-            "title": "👋, 你好 ! 😊",
+            "title": "👋, 你好 !",
             "subtitle": "歡迎來到 DestinySoul Studio 的網站 🎉",
             "button": "了解更多"
         }
+    },
+    "Navbar": {
+        "contact-us": "聯絡我們"
+    },
+    "Footer": {
+        "text":{
+            "author":" 由 EarthlyEric6 製作 ❤️",
+            "buildid":"建置 ID: ",
+            "copyright":"版權所有 © {year} - DestinySoul Studio，保留一切權利"
+        }
+        
     }
 }
