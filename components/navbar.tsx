@@ -1,84 +1,68 @@
 "use client"
 
-import { HiMenuAlt3, HiTranslate, HiX } from "react-icons/hi";
+import { HiMenuAlt3, HiX } from "react-icons/hi";
 import Image from 'next/image'
 import Link from 'next/link'
-import { useEffect, useState } from "react";
-import { defaultLocale } from "@/i18n/config";
 import { useTranslations } from "next-intl";
+import LanguageSwitcher from "./button/languageSwitcher";
 
 export default function Navbar() {
   const t = useTranslations('Navbar');
 
-  const [isOpen, setIsOpen] = useState(false)
   const navItem = [
     { label: t('contact-us'), url: '#contact-us' }
-  ]
-  const langList = [
-    { label: '繁體中文', url: '#', locale: 'zh-TW' },
-    { label: 'English', url: '#', locale: 'en-US' },
-    
-  ]
+  ];
 
-  useEffect(() => {
-    const locale = document.cookie.split(';').find(row => row.startsWith('DS_LOCALE='))?.split('=')[1];
-    if (!locale) {
-      document.cookie = 'DS_LOCALE='+ defaultLocale + ';';
-    }else{
-      console.log('locale:', locale)
-    }
-  }, [])
-
-  const changeLang = (locale: string) => {
-    document.cookie = `DS_LOCALE=${locale};`;
-    window.location.reload();
-  };
-  
   return (
     <div className="navbar bg-gray-900 sticky top-0 z-50">
-      <div className="navbar-start px-5">
-        <Link href="/" className="btn btn-ghost p-0" style={{ width: '192px', height: '64px' }}>
-          <Image src="/assets/transparent/ds-banner-dark.png" alt="destinysoul logo banner" width={192} height={64} />
-        </Link>
-      </div>
-      {/*Desktop*/}
-      <div className="navbar-end hidden lg:flex">
-        <ul className="menu menu-horizontal rounded-box px-5">
-          {navItem.map(item => (
-            <li key={item.url}>
-              <a className="text-lg font-medium" href={item.url}>{item.label}</a>
-            </li>
-          ))}
+      <div className="drawer drawer-end">
+        <input id="side-drawer" type="checkbox" className="drawer-toggle" />
+        <div className="drawer-content flex items-center justify-between w-full px-5">
+          {/* Logo */}
+          <div className="navbar-start">
+            <Link href="/" className="btn btn-ghost p-0" style={{ width: '192px', height: '64px' }}>
+              <Image src="/assets/transparent/ds-banner-dark.png" alt="destinysoul logo banner" width={192} height={64} />
+            </Link>
+          </div>
 
-          <li className="relative ">
-            <details className="dropdown dropdown-end ">
-              <summary className="flex items-center cursor-pointer">
-                <HiTranslate className="w-7 h-7 mr-2 text-white" />
-             </summary>
-              <ul className="dropdown-content menu menu-compact p-2 shadow bg-gray-900 rounded-box w-40 mt-2">
-                {langList.map(lang => (
-                  <li key={lang.locale}>
-                    <button onClick={() => changeLang(lang.locale)} className="btn btn-sm btn-ghost flex items-center w-full gap-2">
-                      <div className="badge badge-outline text-xs px-1">{lang.locale}</div>
-                      {lang.label}
-                    </button>
-                  </li>
-                ))}
+          {/* Desktop Menu */}
+          <div className="navbar-end hidden lg:flex">
+            <ul className="menu menu-horizontal rounded-box px-5">
+              {navItem.map(item => (
+                <li key={item.url}>
+                  <a className="text-lg font-medium" href={item.url}>{item.label}</a>
+                </li>
+              ))}
+              <LanguageSwitcher />
             </ul>
-              </details>
-          </li>
-        </ul>
+          </div>
+          {/* Mobile Toggle Button */}
+          <div className="lg:hidden right-0">
+            <label htmlFor="side-drawer" className="btn btn-ghost drawer-button">
+              <HiMenuAlt3 className="w-6 h-6 text-white" />
+            </label>
+          </div>
+          <input id="side-drawer" type="checkbox" className="drawer-toggle" />
+        </div>
+
+        {/* Drawer Side - Mobile Menu */}
+        <div className="drawer-side">
+          <label htmlFor="side-drawer" className="drawer-overlay"></label>
+          <ul className="menu p-4 w-64 min-h-full bg-gray-900 text-white">
+            <li className="flex justify-end">
+              <label htmlFor="side-drawer" className="btn btn-sm btn-ghost">
+                <HiX className="w-6 h-6 text-white" />
+              </label>
+            </li>
+            {navItem.map(item => (
+              <li key={item.url}>
+                <a href={item.url} className="text-lg font-medium">{item.label}</a>
+              </li>
+            ))}
+            <LanguageSwitcher />
+          </ul>
+        </div>
       </div>
-      {/*Mobile Toggle Button*/}
-      <div className="navbar-end lg:hidden">
-        <button className="btn btn-ghost btn-square" onClick={() => setIsOpen(!isOpen)}>
-          {isOpen ? <HiX className="w-6 h-6" /> : <HiMenuAlt3 className="w-6 h-6" />}
-        </button>
-      </div>
-      {/*Mobile*/}
-      {isOpen && (
-        <div></div>
-      )}
     </div>
-  )
+  );
 }
