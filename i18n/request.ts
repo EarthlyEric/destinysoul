@@ -4,11 +4,11 @@ import { defaultLocale, COOKIE_NAME } from './config';
  
 export default getRequestConfig(async () => {
   const cookie = await cookies();
-  let locale;
+  let locale = defaultLocale;
   if (cookie.get(COOKIE_NAME)?.value == 'undefined') {
     locale = defaultLocale;
   }else{
-    locale = cookie.get(COOKIE_NAME)?.value
+    locale = cookie.get(COOKIE_NAME)?.value || defaultLocale;
   }
  
   return {
