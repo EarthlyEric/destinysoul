@@ -1,7 +1,6 @@
 import { useTranslations } from "next-intl";
 import { FaAngleDoubleDown } from "react-icons/fa";
 
-
 export default function HomePage() {
   const t = useTranslations('HomePage');
   return (
