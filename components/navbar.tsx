@@ -3,7 +3,8 @@
 import { HiMenuAlt3, HiTranslate, HiX } from "react-icons/hi";
 import Image from 'next/image'
 import Link from 'next/link'
-import { useState } from 'react'
+import { use, useEffect, useState } from "react";
+import { defaultLocale } from "@/i18n/config";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -11,10 +12,25 @@ export default function Navbar() {
     { label: 'Contact us', url: '#contact-us' }
   ]
   const langList = [
-    { label: '繁體中文', url: '#', langCode: 'zh_TW' },
-    { label: 'English', url: '#', langCode: 'en_US' },
+    { label: '繁體中文', url: '#', locale: 'zh-TW' },
+    { label: 'English', url: '#', locale: 'en-US' },
     
   ]
+  
+  useEffect(() => {
+    const locale = document.cookie.split(';').find(row => row.startsWith('DS_LOCALE='))?.split('=')[1];
+    if (!locale) {
+      document.cookie = 'DS_LOCALE='+ defaultLocale + ';';
+    }else{
+      console.log('locale:', locale)
+    }
+  }, [])
+
+  const changeLang = (locale: string) => {
+    document.cookie = `DS_LOCALE=${locale};`;
+    window.location.reload();
+  };
+  
   return (
     <div className="navbar bg-gray-900 sticky top-0 z-50">
       <div className="navbar-start px-5">
@@ -38,9 +54,9 @@ export default function Navbar() {
              </summary>
               <ul className="dropdown-content menu menu-compact p-2 shadow bg-gray-900 rounded-box w-40 mt-2">
                 {langList.map(lang => (
-                  <li key={lang.langCode}>
-                    <button className="btn btn-sm btn-ghost flex items-center w-full gap-2">
-                      <div className="badge badge-outline text-xs px-1">{lang.langCode}</div>
+                  <li key={lang.locale}>
+                    <button onClick={() => changeLang(lang.locale)} className="btn btn-sm btn-ghost flex items-center w-full gap-2">
+                      <div className="badge badge-outline text-xs px-1">{lang.locale}</div>
                       {lang.label}
                     </button>
                   </li>
