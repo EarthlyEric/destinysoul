@@ -10,4 +10,4 @@ const config: IConfig = {
   generateRobotsTxt: false,
 }
 
-export default config
+export default config;
