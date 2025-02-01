@@ -33,7 +33,7 @@ export default function LanguageSwitcher() {
                     {langList.map(lang => (
                         <li key={lang.locale}>
                             <button onClick={() => changeLang(lang.locale)} 
-                                className={`btn btn-sm btn-ghost flex items-center w-full gap-2 ${currentLocale === lang.locale ? 'btn-disabled' : ''}`}>
+                                className={`btn btn-sm btn-outline flex items-center w-full gap-2 ${currentLocale === lang.locale ? 'btn-disabled' : ''}`}>
                                 <div className="badge badge-outline text-xs px-1">{lang.locale}</div>
                                 {lang.label}
                             </button>
