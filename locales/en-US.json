@@ -1,52 +1,58 @@
 {
-    "HomePage":{
-       "welcome":{
-          "title":"👋, Hello there !",
-          "subtitle":"Welcome to DestinySoul Studio's Website 🎉",
-          "button":"Learn More"
-       },
-       "storyevents":{
-          "title":"Our Story",
-          "subtitle":"",
-          "1":{
-             "date":"2021 Sep",
-             "text":"Elyse started development"
-          },
-          "2":{
-             "date":"2021 Sep",
-             "text":"ReloadDev founded, registered reload-dev.ml"
-          },
-          "3":{
-             "date":"2022 Jul",
-             "text":"Elyse renamed to Lost"
-          },
-          "4":{
-             "date":"2023 Jan",
-             "text":"Organization renamed to DestinySoul Studio"
-          },
-          "5":{
-             "date":"2023 Jan",
-             "text":"Registered destinysoul.eu.org, moved domain to destinysoul.eu.org"
-          },
-          "6":{
-             "date":"2023 Nov",
-             "text":"Registered destinysoul.xyz, moved domain to destinysoul.xyz"
-          },
-          "7":{
-             "date":"2024 Feb",
-             "text":"Lost renamed to Luminara"
-          }
-       }
-    },
-    "Navbar":{
-       "contact-us":"Contact us"
-    },
-    "Footer":{
-       "text":{
-          "author":" Made by EarthlyEric6 with ❤️",
-          "buildid":"Build ID: ",
-          "copyright":"Copyright © {year} - DestinySoul Studio. All right reserved.",
-          "aiTrnaslate": ""
-       }
-    }
- }
+   "HomePage":{
+      "welcome":{
+         "title":"👋, Hello there !",
+         "subtitle":{
+            "1":"Welcome to the DestinySoul Studio website 🎉",
+            "2":"We are a development team passionate about innovation, focusing on the fusion of technology and creativity 💡",
+            "3":"Explore our projects and see how we turn ideas into reality ✨",
+            "4":"We will continue to improve our skills, push boundaries, and create more possibilities for the future! 🚀",
+            "5":"Our website is continuously being updated, stay tuned! ⏳"
+         },
+         "button":"Learn More"
+      },
+      "storyevents":{
+         "title":"Our Story",
+         "subtitle":"",
+         "1":{
+            "date":"2021 Sep",
+            "text":"Elyse started development"
+         },
+         "2":{
+            "date":"2021 Sep",
+            "text":"ReloadDev founded, registered reload-dev.ml"
+         },
+         "3":{
+            "date":"2022 Jul",
+            "text":"Elyse renamed to Lost"
+         },
+         "4":{
+            "date":"2023 Jan",
+            "text":"Organization renamed to DestinySoul Studio"
+         },
+         "5":{
+            "date":"2023 Jan",
+            "text":"Registered destinysoul.eu.org, moved domain to destinysoul.eu.org"
+         },
+         "6":{
+            "date":"2023 Nov",
+            "text":"Registered destinysoul.xyz, moved domain to destinysoul.xyz"
+         },
+         "7":{
+            "date":"2024 Feb",
+            "text":"Lost renamed to Luminara"
+         }
+      }
+   },
+   "Navbar":{
+      "contact-us":"Contact us"
+   },
+   "Footer":{
+      "text":{
+         "author":" Made by EarthlyEric6 with ❤️",
+         "buildid":"Build ID: ",
+         "copyright":"Copyright © {year} - DestinySoul Studio. All right reserved.",
+         "aiTrnaslate":""
+      }
+   }
+}
