@@ -22,7 +22,7 @@ export default function HomePage() {
         <div className="hero-overlay bg-gradient-to-b from-transparent to-base-100"></div>
         <div className="hero-content text-neutral-content text-center">
           <div className="max-auto">
-            <h1 className="mb-5 lg:text-9xl text-5xl font-bold">
+            <h1 className="mb-5 lg:text-9xl text-6xl font-bold">
               {t("welcome.title")}
             </h1>
             <p className="mb-5 text-xl font-bold">{t("welcome.subtitle")}</p>
@@ -58,6 +58,20 @@ export default function HomePage() {
               </ul>
             </div>
           </div>
+        </div>
+      </div>
+      <div className="hero min-h-screen bg-base-100">
+        <div className="hero-overlay"></div>
+        <div className="hero-content">
+          <div className="flex w-full">
+            <div className="card bg-base-300 rounded-box grid w-1/2 h-full flex-grow place-items-center">
+              <div className="card-title">title</div>
+            </div>
+            <div className="divider divider-horizontal"></div>
+            <div className="card bg-base-300 rounded-box grid w-1/2 h-full flex-grow place-items-center">
+              <div className="card-title">title</div>
+            </div>
+            </div>
         </div>
       </div>
     </>
