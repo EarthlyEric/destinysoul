@@ -18,7 +18,7 @@ export default function HomePage() {
     <>
       <div
         className="hero min-h-screen"
-        style={{ backgroundImage: "url('/assets/images/hero.jpg')" }}
+        style={{ backgroundImage: "url('/assets/images/hero.webp')" }}
       >
         <div className="hero-overlay bg-gradient-to-b from-transparent to-base-100"></div>
         <div className="hero-content text-neutral-content text-center">
@@ -28,7 +28,7 @@ export default function HomePage() {
             </h1>
             <p className="mb-5 text-xl font-bold">{t("welcome.subtitle")}</p>
             <p className="mb-5">{/* wait to fill text */}</p>
-            <a href="#about-us" className="btn btn-primary">
+            <a href="#about-us" className="btn btn-primary animate-bounce">
               <FaAngleDoubleDown className="w-6 h-6 mr-2" />
               {t("welcome.button")}
             </a>
