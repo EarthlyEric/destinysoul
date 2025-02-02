@@ -18,7 +18,7 @@ export default function HomePage() {
     <>
       <div
         className="hero min-h-screen"
-        style={{ backgroundImage: "url('/assets/images/hero.webp')" }}
+        style={{ backgroundImage: "url('/assets/images/welcome.webp')" }}
       >
         <div className="hero-overlay bg-gradient-to-b from-transparent to-base-100"></div>
         <div className="hero-content text-neutral-content text-center">
