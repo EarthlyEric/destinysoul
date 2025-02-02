@@ -45,7 +45,8 @@
        "text":{
           "author":" Made by EarthlyEric6 with ❤️",
           "buildid":"Build ID: ",
-          "copyright":"Copyright © {year} - DestinySoul Studio. All right reserved."
+          "copyright":"Copyright © {year} - DestinySoul Studio. All right reserved.",
+          "aiTrnaslate": ""
        }
     }
  }

@@ -45,7 +45,8 @@ export default function Footer() {
                         </a>
                     )}
                 </p>
-                <p>{t('text.copyright', { year: new Date().getFullYear() })} </p>
+                <p className={ t('text.aiTrnaslate')!="" ? "block" : "hidden"}>{  t('text.aiTrnaslate')}</p>
+                <p>{t('text.copyright', { year: new Date().getFullYear() })}</p>
             </aside>
         </footer>
     );

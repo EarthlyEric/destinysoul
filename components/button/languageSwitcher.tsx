@@ -5,8 +5,9 @@ import { HiTranslate } from "react-icons/hi";
 export default function LanguageSwitcher() {
     const [currentLocale, setCurrentLocale] = useState(defaultLocale);
     const langList = [
-        { label: '繁體中文', url: '#', locale: 'zh-TW' },
-        { label: 'English', url: '#', locale: 'en-US' },
+        { label: '繁體中文', locale: 'zh-TW' },
+        { label: 'English', locale: 'en-US' },
+        { label: '日本語', locale: 'ja-JP' },
     ];
     
     useEffect(() => {

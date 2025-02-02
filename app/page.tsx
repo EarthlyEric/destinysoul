@@ -1,18 +1,17 @@
 import { useTranslations } from "next-intl";
-import { FaAngleDoubleDown, FaCheckCircle, FaRegEdit } from "react-icons/fa";
-import { FaRegCirclePlay } from "react-icons/fa6";
-import { RiEditCircleFill } from "react-icons/ri";
+import { FaAngleDoubleDown, FaDotCircle } from "react-icons/fa";
+
 
 export default function HomePage() {
   const t = useTranslations("HomePage");
   const storyevents = [
-    { date: t('storyevents.1.date'), text: t('storyevents.1.text'), icon: <FaCheckCircle className="text-primary w-6 h-6" /> },
-    { date: t('storyevents.2.date'), text: t('storyevents.2.text'), icon: <FaRegCirclePlay className="text-primary w-6 h-6" /> },
-    { date: t('storyevents.3.date'), text: t('storyevents.3.text'), icon: <RiEditCircleFill className="text-primary w-6 h-6" /> },
-    { date: t('storyevents.4.date'), text: t('storyevents.4.text'), icon: <RiEditCircleFill className="text-primary w-6 h-6" /> },
-    { date: t('storyevents.5.date'), text: t('storyevents.5.text'), icon: <FaCheckCircle className="text-primary w-6 h-6" /> },
-    { date: t('storyevents.6.date'), text: t('storyevents.6.text'), icon: <FaRegEdit className="text-primary w-6 h-6" /> },
-    { date: t('storyevents.7.date'), text: t('storyevents.7.text'), icon: <RiEditCircleFill className="text-primary w-6 h-6" /> }
+    { date: t('storyevents.1.date'), text: t('storyevents.1.text') },
+    { date: t('storyevents.2.date'), text: t('storyevents.2.text') },
+    { date: t('storyevents.3.date'), text: t('storyevents.3.text') },
+    { date: t('storyevents.4.date'), text: t('storyevents.4.text') },
+    { date: t('storyevents.5.date'), text: t('storyevents.5.text') },
+    { date: t('storyevents.6.date'), text: t('storyevents.6.text') },
+    { date: t('storyevents.7.date'), text: t('storyevents.7.text') }
   ];
   return (
     <>
@@ -28,16 +27,16 @@ export default function HomePage() {
             </h1>
             <p className="mb-5 text-xl font-bold">{t("welcome.subtitle")}</p>
             <p className="mb-5">{/* wait to fill text */}</p>
-            <a href="#about-us" className="btn btn-primary animate-bounce">
+            <a href="#our-story" className="btn btn-primary animate-bounce">
               <FaAngleDoubleDown className="w-6 h-6 mr-2" />
               {t("welcome.button")}
             </a>
           </div>
         </div>
       </div>
-      <div id="about-us" className="hero min-h-screen h-auto bg-base-100">
+      <div id="our-story" className="hero min-h-screen bg-base-100">
         <div className="hero-overlay"></div>
-        <div className="hero-content mx-auto flex flex-col">
+        <div className="hero-content flex flex-col">
           <h1 className="card-title text-4xl font-bold text-center lg:text-right">
             {t('storyevents.title')}
           </h1>
@@ -47,11 +46,13 @@ export default function HomePage() {
               <ul className="timeline timeline-vertical">
                 {storyevents.map((event, index) => (
                   <li key={index}>
-                    {index !== 0 && <hr className="bg-primary" />}
-                    <div className="timeline-start">{event.date}</div>
-                    <div className="timeline-middle">{event.icon}</div>
+                    {index !== 0 && <hr className="bg-primary"/>}
+                    <div className="timeline-start font-mono">{event.date}</div>
+                    <div className="timeline-middle">
+                      <FaDotCircle className="text-primary w-4 h-4" />
+                    </div>
                     <div className="timeline-end timeline-box">{event.text}</div>
-                    {index !== storyevents.length - 1 && <hr className="bg-primary" />}
+                    {index !== storyevents.length - 1 && <hr className="bg-primary"/>}
                   </li>
                 ))}
               </ul>

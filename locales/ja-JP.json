@@ -1,0 +1,52 @@
+{
+    "HomePage": {
+        "welcome": {
+            "title": "👋、こんにちは！",
+            "subtitle": "DestinySoul Studioのウェブサイトへようこそ🎉",
+            "button": "もっと詳しく"
+        },
+        "storyevents": {
+            "title": "私たちの物語",
+            "subtitle": "",
+            "1": {
+                "date": "2021年9月",
+                "text": "Elyseの開発が始まりました"
+            },
+            "2": {
+                "date": "2021年9月",
+                "text": "ReloadDevが設立され、reload-dev.mlが登録されました"
+            },
+            "3": {
+                "date": "2022年7月",
+                "text": "ElyseがLostに改名されました"
+            },
+            "4": {
+                "date": "2023年1月",
+                "text": "組織がDestinySoul Studioに改名されました"
+            },
+            "5": {
+                "date": "2023年1月",
+                "text": "destinysoul.eu.orgが登録され、ドメインがdestinysoul.eu.orgに移行されました"
+            },
+            "6": {
+                "date": "2023年11月",
+                "text": "destinysoul.xyzが登録され、ドメインがdestinysoul.xyzに移行されました"
+            },
+            "7": {
+                "date": "2024年2月",
+                "text": "LostがLuminaraに改名されました"
+            }
+        }
+    },
+    "Navbar": {
+        "contact-us": "お問い合わせ"
+    },
+    "Footer": {
+        "text": {
+            "author": " EarthlyEric6によって❤️で作られました",
+            "buildid": "ビルドID: ",
+            "copyright": "著作権 © {year} - DestinySoul Studio，全著作権所有",
+            "aiTrnaslate": "日本語翻訳 by AI"
+        }
+    }
+}

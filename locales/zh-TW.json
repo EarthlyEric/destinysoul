@@ -45,7 +45,8 @@
        "text":{
           "author":" 由 EarthlyEric6 製作 ❤️",
           "buildid":"建置 ID: ",
-          "copyright":"版權所有 © {year} - DestinySoul Studio，保留一切權利"
+          "copyright":"版權所有 © {year} - DestinySoul Studio，保留一切權利",
+          "aiTrnaslate": ""
        }
     }
  }
