@@ -1,4 +1,6 @@
+'use client'
 import { useTranslations } from "next-intl";
+import Typewriter from "typewriter-effect";
 import { FaAngleDoubleDown, FaDotCircle } from "react-icons/fa";
 
 
@@ -25,8 +27,23 @@ export default function HomePage() {
             <h1 className="mb-5 lg:text-9xl text-6xl font-bold">
               {t("welcome.title")}
             </h1>
-            <p className="mb-5 text-xl font-bold">{t("welcome.subtitle")}</p>
-            <p className="mb-5">{/* wait to fill text */}</p>
+            <p className="mb-5 text-xl font-bold">
+              {t("welcome.subtitle.1")}
+            </p>
+            <div className="mb-5 text-xl font-bold">
+              <Typewriter
+                options={{
+                  strings: [
+                    t("welcome.subtitle.2"),
+                    t("welcome.subtitle.3"),
+                    t("welcome.subtitle.4"),
+                    t("welcome.subtitle.5"),
+                  ],
+                  autoStart: true,
+                  loop: true,
+                }}
+              />
+            </div>
             <a href="#our-story" className="btn btn-primary animate-bounce">
               <FaAngleDoubleDown className="w-6 h-6 mr-2" />
               {t("welcome.button")}
