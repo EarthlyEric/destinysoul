@@ -1,20 +1,51 @@
 {
     "HomePage":{
-        "hero": {
-            "title": "👋, 你好 !",
-            "subtitle": "歡迎來到 DestinySoul Studio 的網站 🎉",
-            "button": "了解更多"
-        }
+       "welcome":{
+          "title":"👋, 你好 !",
+          "subtitle":"歡迎來到 DestinySoul Studio 的網站 🎉",
+          "button":"了解更多"
+       },
+       "storyevents":{
+          "title":"我們的故事",
+          "subtitle":"",
+          "1":{
+             "date":"2021 9月",
+             "text":"Elyse 開始開發"
+          },
+          "2":{
+             "date":"2021 9月",
+             "text":"ReloadDev 成立，註冊 reload-dev.ml"
+          },
+          "3":{
+             "date":"2022 7月",
+             "text":"Elyse 更名為 Lost"
+          },
+          "4":{
+             "date":"2023 1月",
+             "text":"組織更名為 DestinySoul Studio"
+          },
+          "5":{
+             "date":"2023 1月",
+             "text":"註冊 destinysoul.eu.org，將域名遷移destinysoul.eu.org"
+          },
+          "6":{
+             "date":"2023 Nov",
+             "text":"註冊 destinysoul.xyz，將域名遷移 destinysoul.xyz"
+          },
+          "7":{
+             "date":"2024 2月",
+             "text":"Lost 更名為 Luminara"
+          }
+       }
     },
-    "Navbar": {
-        "contact-us": "聯絡我們"
+    "Navbar":{
+       "contact-us":"聯絡我們"
     },
-    "Footer": {
-        "text":{
-            "author":" 由 EarthlyEric6 製作 ❤️",
-            "buildid":"建置 ID: ",
-            "copyright":"版權所有 © {year} - DestinySoul Studio，保留一切權利"
-        }
-        
+    "Footer":{
+       "text":{
+          "author":" 由 EarthlyEric6 製作 ❤️",
+          "buildid":"建置 ID: ",
+          "copyright":"版權所有 © {year} - DestinySoul Studio，保留一切權利"
+       }
     }
-}
+ }

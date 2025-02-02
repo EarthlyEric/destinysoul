@@ -6,7 +6,7 @@ export default function LanguageSwitcher() {
     const [currentLocale, setCurrentLocale] = useState(defaultLocale);
     const langList = [
         { label: '繁體中文', url: '#', locale: 'zh-TW' },
-        { label: 'English', url: '#', locale: 'en-US' }
+        { label: 'English', url: '#', locale: 'en-US' },
     ];
     
     useEffect(() => {
@@ -33,19 +33,12 @@ export default function LanguageSwitcher() {
                     {langList.map(lang => (
                         <li key={lang.locale}>
                             <button onClick={() => changeLang(lang.locale)} 
-                                className={`btn btn-sm btn-outline flex items-center w-full gap-2 ${currentLocale === lang.locale ? 'btn-disabled' : ''}`}>
+                                className={`btn btn-sm btn-outline flex items-center w-full gap-2 mt-1 ${currentLocale === lang.locale ? 'btn-disabled' : ''}`}>
                                 <div className="badge badge-outline text-xs px-1">{lang.locale}</div>
                                 {lang.label}
                             </button>
                         </li>
                     ))}
-                    {langList.length > 3 && (
-                        <li>
-                            <button className="btn btn-sm btn-ghost flex items-center w-full gap-2 btn-disabled" disabled>
-                                More languages available...
-                            </button>
-                        </li>
-                    )}
                 </ul>
             </details>
         </li>

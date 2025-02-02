@@ -20,7 +20,7 @@ export default function Navbar() {
         <div className="drawer-content flex items-center justify-between w-full px-5">
           {/* Logo */}
           <div className="navbar-start">
-            <Link href="/" className="btn btn-ghost p-0" style={{ width: '192px', height: '64px' }}>
+            <Link href="/" className="btn btn-ghost" style={{ width: '192px', height: '64px' }}>
               <Image src="/assets/transparent/ds-banner-dark.png" alt="destinysoul logo banner" width={192} height={64} />
             </Link>
           </div>
