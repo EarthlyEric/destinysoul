@@ -1,7 +1,7 @@
 'use client'
 import { useTranslations } from "next-intl";
 import Typewriter from "typewriter-effect";
-import { FaAngleDoubleDown, FaDotCircle } from "react-icons/fa";
+import { FaAngleDoubleDown, FaCircle } from "react-icons/fa";
 
 
 export default function HomePage() {
@@ -30,7 +30,7 @@ export default function HomePage() {
             <p className="mb-5 text-xl font-bold">
               {t("welcome.subtitle.1")}
             </p>
-            <div className="mb-5 text-xl font-bold">
+            <div className="mb-5 text-base">
               <Typewriter
                 options={{
                   strings: [
@@ -58,15 +58,15 @@ export default function HomePage() {
             {t('storyevents.title')}
           </h1>
           <p className="text-center lg:text-right">{t('storyevents.subtitle')}</p>
-          <div className="card bg-base-300 w-full max-auto shadow-2xl border-2 border-blue-300 flex flex-row">
+          <div className="card bg-base-300 max-w-xl mx-auto shadow-2xl border-2 border-blue-300">
             <div className="card-body p-2 items-start">
               <ul className="timeline timeline-vertical">
                 {storyevents.map((event, index) => (
-                  <li key={index}>
+                  <li key={index} className="items-start">
                     {index !== 0 && <hr className="bg-primary"/>}
-                    <div className="timeline-start font-mono">{event.date}</div>
+                    <div className="timeline-start font-mono text-sm">{event.date}</div>
                     <div className="timeline-middle">
-                      <FaDotCircle className="text-primary w-4 h-4" />
+                      <FaCircle className="text-primary w-4 h-4" />
                     </div>
                     <div className="timeline-end timeline-box">{event.text}</div>
                     {index !== storyevents.length - 1 && <hr className="bg-primary"/>}
@@ -75,20 +75,6 @@ export default function HomePage() {
               </ul>
             </div>
           </div>
-        </div>
-      </div>
-      <div className="hero min-h-screen bg-base-100">
-        <div className="hero-overlay"></div>
-        <div className="hero-content">
-          <div className="flex w-full">
-            <div className="card bg-base-300 rounded-box grid w-1/2 h-full flex-grow place-items-center">
-              <div className="card-title">title</div>
-            </div>
-            <div className="divider divider-horizontal"></div>
-            <div className="card bg-base-300 rounded-box grid w-1/2 h-full flex-grow place-items-center">
-              <div className="card-title">title</div>
-            </div>
-            </div>
         </div>
       </div>
     </>
