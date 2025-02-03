@@ -54,5 +54,8 @@
           "copyright":"著作権 © {year} - DestinySoul Studio，全著作権所有",
           "aiTrnaslate":"日本語翻訳 by AI"
        }
-    }
+   },
+   "dev":{
+      "text": "🚧 このウェブサイトは開発中であり、将来的により完全なコンテンツが追加される予定です 🚀"
+   }
  }

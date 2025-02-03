@@ -9,9 +9,12 @@ import LanguageSwitcher from "./button/languageSwitcher";
 export default function Navbar() {
   const t = useTranslations("Navbar");
 
-  const navItem = [{ label: t("contact-us"), url: "#contact-us" }];
+  const navItem = [
+    { label: t('contact-us'), url: "#contact-us",submenus:[] },
+  ];
 
   return (
+    <>
     <div className="fixed top-4 left-1/2 transform -translate-x-1/2 bg-gray-900 bg-opacity-90 shadow-lg rounded-full z-50 px-6 py-3 w-[90%] max-w-4xl">
       <div className="flex items-center justify-between">
         <Link
@@ -62,5 +65,6 @@ export default function Navbar() {
         </div>
       </div>
     </div>
+    </>
   );
 }

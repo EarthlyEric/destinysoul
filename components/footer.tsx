@@ -1,5 +1,6 @@
 import { FaGithub } from "react-icons/fa";
 import { useTranslations } from "next-intl";
+import DevelopmentAlert from "./DevelopmentAlert";
 
 export default function Footer() {
     const t = useTranslations('Footer');
@@ -10,9 +11,10 @@ export default function Footer() {
         { label: "Contact Us", href: "#contact-us" },
     ];
     const socialItems = [
-        { label: "GitHub", href: "", icon: <FaGithub className="w-6 h-6"/> }
+        { label: "GitHub", href: "https://github.com/EarthlyEric/destinysoul", icon: <FaGithub className="w-6 h-6"/> }
     ]
     return (
+        <>
         <footer className="footer bg-gray-900 footer-center text-base-content rounded p-10">
             <nav className="grid grid-flow-col gap-4">
                 {navItems.map((item) => (
@@ -49,5 +51,7 @@ export default function Footer() {
                 <p>{t('text.copyright', { year: new Date().getFullYear() })}</p>
             </aside>
         </footer>
+        <DevelopmentAlert />
+        </>
     );
 };

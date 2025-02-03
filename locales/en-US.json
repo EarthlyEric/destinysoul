@@ -54,5 +54,8 @@
          "copyright":"Copyright © {year} - DestinySoul Studio. All right reserved.",
          "aiTrnaslate":""
       }
+   },
+   "dev":{
+      "text": "🚧 This website is under development, more complete content will be added in the future 🚀"
    }
 }
