@@ -1,4 +1,4 @@
-const siteUrl = process.env.CF_PAGES_BRANCH == 'master' 
+const siteUrl = process.env.VERCEL_TARGET_ENV == 'production'
   ? 'https://destinysoul.xyz' 
   : 'https://remaster.destinysoul.pages.dev';
 
