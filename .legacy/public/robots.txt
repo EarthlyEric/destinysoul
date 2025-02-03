@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /resources/
+Allow: /
+Host: https://destinysoul.xyz
+Sitemap: https://destinysoul.xyz/sitemap.xml
