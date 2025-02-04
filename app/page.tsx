@@ -51,6 +51,11 @@ export default function HomePage() {
           </div>
         </div>
       </div>
+      <div className="hero min-h-screen bg-base-100 text-white">
+        <div className="hero-overlay"></div>
+        <div className="hero-content">
+        </div>
+      </div>
       <div id="our-story" className="hero min-h-screen bg-base-100 text-white">
         <div className="hero-overlay"></div>
         <div className="hero-content flex flex-col">
@@ -64,11 +69,11 @@ export default function HomePage() {
                 {storyevents.map((event, index) => (
                   <li key={index} className="items-start">
                     {index !== 0 && <hr className="bg-primary"/>}
-                    <div className="timeline-start font-mono text-sm">{event.date}</div>
+                    <div className={`${(index+1) % 2 === 0 ? 'timeline-start' : 'timeline-end'} font-mono text-sm`}>{event.date}</div>
                     <div className="timeline-middle">
                       <FaCircle className="text-primary w-4 h-4" />
                     </div>
-                    <div className="timeline-end timeline-box">{event.text}</div>
+                    <div className={`${(index+1) % 2 === 0 ? 'timeline-end' : 'timeline-start'} timeline-box`}>{event.text}</div>
                     {index !== storyevents.length - 1 && <hr className="bg-primary"/>}
                   </li>
                 ))}
