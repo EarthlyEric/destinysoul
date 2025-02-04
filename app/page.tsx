@@ -51,7 +51,7 @@ export default function HomePage() {
           </div>
         </div>
       </div>
-      <div id="our-story" className="hero min-h-screen bg-base-100">
+      <div id="our-story" className="hero min-h-screen bg-base-100 text-white">
         <div className="hero-overlay"></div>
         <div className="hero-content flex flex-col">
           <h1 className="card-title text-4xl font-bold text-center lg:text-right">
